@@ -1,0 +1,28 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "01:00"
+    timezone: Europe/Berlin
+  open-pull-requests-limit: 10
+  reviewers:
+  - jroehl
+  ignore:
+  - dependency-name: aws-sdk
+    versions:
+    - 2.874.0
+    - 2.875.0
+    - 2.879.0
+    - 2.884.0
+    - 2.894.0
+  - dependency-name: "@types/node"
+    versions:
+    - 15.0.1
+  - dependency-name: "@serverless/typescript"
+    versions:
+    - 2.34.0
+  - dependency-name: webpack
+    versions:
+    - 5.31.2
